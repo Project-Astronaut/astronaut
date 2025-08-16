@@ -1,4 +1,4 @@
-# Astronaut:
+# Astronaut
 
 Astronaut is a modular, production-oriented in-memory vector database written in Rust.
 
