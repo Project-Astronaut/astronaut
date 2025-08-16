@@ -1,4 +1,4 @@
-# Astronaut: In-memory Vector DB (Rust)
+# Astronaut:
 
 Astronaut is a modular, production-oriented in-memory vector database written in Rust.
 
@@ -10,17 +10,6 @@ We welcome contributors! If you want to help build a high-performance vector DB 
 - __Early Stage__: APIs and modules are evolving.
 - __Placeholders__: Indexing (HNSW/IVF), quantization, and storage backends are currently scaffolds.
 - __Goals__: High-throughput inserts, ANN search, observability, and optional persistence.
-
-## Workspace Layout
-- `crates/astronaut-core`: Core types, traits, in-memory storage
-- `crates/astronaut-api-types`: API request/response models
-- `crates/astronaut-server`: Axum-based HTTP server
-- `crates/astronaut-cli`: CLI wrapper
-- `crates/astronaut-distance`: Distance functions (SIMD-ready)
-- `crates/astronaut-index-hnsw`: HNSW (placeholder)
-- `crates/astronaut-index-ivf`: IVF (placeholder)
-- `crates/astronaut-quant`: Quantization (placeholder)
-- `crates/astronaut-storage`: Storage backends (placeholder)
 
 ## Quickstart
 - __Run server__
@@ -40,7 +29,7 @@ curl -X POST http://localhost:8080/v1/search \
   -d '{"vector":[0,1,0],"top_k":10}'
 ```
 
-## Roadmap (High-level)
+## Roadmap 
 - __Indexing__: HNSW, IVF, IVF-PQ
 - __Compute__: SIMD-optimized distances
 - __Storage__: Snapshots, mmap, optional WAL
