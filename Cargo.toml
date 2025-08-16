@@ -1,0 +1,32 @@
+[workspace]
+members = [
+    "crates/core",
+    "crates/api-types",
+    "crates/server",
+    "crates/cli",
+    # Future modules
+    "crates/distance",
+    "crates/index-hnsw",
+    "crates/index-ivf",
+    "crates/quant",
+    "crates/storage",
+]
+
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "Apache-2.0"
+authors = ["Project Astronaut Contributors"]
+description = "Astronaut: In-memory vector DB in Rust (scalable scaffold)"
+
+[workspace.dependencies]
+anyhow = "1"
+thiserror = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+axum = { version = "0.7", default-features = false, features = ["http1", "json", "tokio"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+clap = { version = "4", features = ["derive"] }

@@ -1,0 +1,16 @@
+# Clippy configuration for the Astronaut workspace
+# Keep code quality high while avoiding excessive noise during early development.
+
+# Lint levels
+warn = [
+    "clippy::all",
+    "clippy::pedantic",
+]
+
+# Common allowances for pragmatic ergonomics
+allow = [
+    "clippy::module_name_repetitions",
+    "clippy::missing_errors_doc",
+    "clippy::missing_panics_doc",
+    "clippy::must_use_candidate",
+]
